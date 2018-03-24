@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.huyc.may.dao.CourseTwoMapper" >
+  <resultMap id="BaseResultMap" type="com.huyc.may.entity.CourseTwo" >
+    <id column="course_two_id" property="courseTwoId" jdbcType="VARCHAR" />
+    <result column="course_two_name" property="courseTwoName" jdbcType="VARCHAR" />
+    <result column="course_two_url" property="courseTwoUrl" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    course_two_id, course_two_name, course_two_url
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from course_two
+    where course_two_id = #{courseTwoId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from course_two
+    where course_two_id = #{courseTwoId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.huyc.may.entity.CourseTwo" >
+    insert into course_two (course_two_id, course_two_name, course_two_url
+      )
+    values (#{courseTwoId,jdbcType=VARCHAR}, #{courseTwoName,jdbcType=VARCHAR}, #{courseTwoUrl,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.huyc.may.entity.CourseTwo" >
+    insert into course_two
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="courseTwoId != null" >
+        course_two_id,
+      </if>
+      <if test="courseTwoName != null" >
+        course_two_name,
+      </if>
+      <if test="courseTwoUrl != null" >
+        course_two_url,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="courseTwoId != null" >
+        #{courseTwoId,jdbcType=VARCHAR},
+      </if>
+      <if test="courseTwoName != null" >
+        #{courseTwoName,jdbcType=VARCHAR},
+      </if>
+      <if test="courseTwoUrl != null" >
+        #{courseTwoUrl,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.huyc.may.entity.CourseTwo" >
+    update course_two
+    <set >
+      <if test="courseTwoName != null" >
+        course_two_name = #{courseTwoName,jdbcType=VARCHAR},
+      </if>
+      <if test="courseTwoUrl != null" >
+        course_two_url = #{courseTwoUrl,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where course_two_id = #{courseTwoId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.huyc.may.entity.CourseTwo" >
+    update course_two
+    set course_two_name = #{courseTwoName,jdbcType=VARCHAR},
+      course_two_url = #{courseTwoUrl,jdbcType=VARCHAR}
+    where course_two_id = #{courseTwoId,jdbcType=VARCHAR}
+  </update>
+  <select id="selectList"  resultMap="BaseResultMap" >
+        select * from course_two
+   </select>
+</mapper>

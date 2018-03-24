@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bundle name="ZZW" connectorClass="LDCustomConnector" version="0.1.11" customWebContainer="LDMPopWebViewController">
+    <url_handler_list>
+        <ViewController name="mainTab1" class="MyTabController" type="share">
+        </ViewController>
+        <ViewController name="home" class="ZZWHomeViewController" webquery="" type="share">
+        </ViewController>
+        <ViewController name="selfstock" class="ZZWFavorViewController" webquery="" type="share">
+        </ViewController>
+        <ViewController name="market" class="ZZWQuoteViewController" webquery="" type="share">
+        </ViewController>
+        <ViewController name="information" class="ZZWDiscloseViewController" webquery="" type="share">
+        </ViewController>
+        <ViewController name="mine" class="ZZWMineViewController" webquery="" type="share">
+        </ViewController>
+    </url_handler_list>
+    
+    <service_list>
+<!--        业务组件服务-->
+        <service name="homeService" class="ZZWHomeServiceImpl"  protocol="ZZWHomeService"/>
+        <service name="selfStockService" class="ZZWSelfStockServiceImpl"  protocol="ZZWSelfStockService"/>
+        <service name="marketService" class="ZZWMarketServiceImpl"  protocol="ZZWMarketService"/>
+        <service name="informationService" class="ZZWInformationServiceImpl"  protocol="ZZWInformationService"/>
+        <service name="mineService" class="ZZWMineServiceImpl"  protocol="ZZWMineService"/>
+<!--        基础控件服务-->
+        <service name="viewBaseService" class="ViewBaseServiceImpl"  protocol="ViewBaseService"/>
+<!--        网络中心服务-->
+        <service name="netWorkService" class="NetWorkServiceImpl"  protocol="NetWorkService"/>
+    </service_list>
+    
+</bundle>
+<!--
+ （1）当bundle没有开发之前，可以优先开发wap页面,并在应用中打开； 但是可以根据业务要求确定bundle得UI总线导航配置；
+ (2) bus会自动判定当前有没有这个viewController的实现类，如果没有，targetclass＝nil；
+ (3) 如果能够跟JSBridge合用，将会有很大用处；
+ -->

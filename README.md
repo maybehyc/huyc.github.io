@@ -1,2 +1,1 @@
-![](http://www.baidu.com/img/bdlogo.gif)
-# huyc.github.io
+[iOS](http://blog.csdn.net/guodongxiaren)

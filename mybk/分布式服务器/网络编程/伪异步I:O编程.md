@@ -4,6 +4,6 @@
 
 伪异步I/O模型图：
 
-![](https://github.com/maybehyc/huyc.github.io/blob/master/mybk/JAVAEE/images/index2.png)
+![](https://github.com/maybehyc/huyc.github.io/blob/master/mybk/分布式服务器/images/index2.png)
 
 附上Demo

@@ -13,5 +13,7 @@
 ### 步骤
 
 1.implements Parcelable
-2.
-3.
+2.![](https://github.com/maybehyc/huyc.github.io/blob/master/mybk/Android/Android基础/images/Parcelable序列化1.png)
+3.![](https://github.com/maybehyc/huyc.github.io/blob/master/mybk/Android/Android基础/images/Parcelable序列化2.png)
+4.Parcelable接口介绍
+![](https://github.com/maybehyc/huyc.github.io/blob/master/mybk/Android/Android基础/images/Parcelable序列化3.png)

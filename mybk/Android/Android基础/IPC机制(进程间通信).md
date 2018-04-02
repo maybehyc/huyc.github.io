@@ -8,7 +8,7 @@ Serializable接口 : Java所提供的序列化接口
 
 Parcelable接口 ：Android提供的序列化接口
 
-demo:
+详解
 
 Binder ：一个类,用于进程间通信
 AIDL底层是Binder

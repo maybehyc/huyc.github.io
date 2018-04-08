@@ -10,5 +10,6 @@
 3.当你想通过RMI传输对象的时候
 
 ## 序列化和反序列化
+![](https://github.com/maybehyc/huyc.github.io/blob/master/mybk/Android/Android基础/images/serializable序列化.png)
 
 

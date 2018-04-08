@@ -12,7 +12,7 @@
 ## 序列化和反序列化
 ### 步骤
 
-1.implements Parcelable
+1.implements Parcelable <br>
 2.![](https://github.com/maybehyc/huyc.github.io/blob/master/mybk/Android/Android基础/images/Parcelable序列化1.png)
 3.![](https://github.com/maybehyc/huyc.github.io/blob/master/mybk/Android/Android基础/images/Parcelable序列化2.png)
 4.Parcelable接口介绍

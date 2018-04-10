@@ -4,7 +4,7 @@ Redis在实现字典时用到了两种不同的哈希算法，MurmurHash便是�
 
 MurmurHash2的实现
 
-·unsigned int murMurHash(const void *key, int len)  
+`unsigned int murMurHash(const void *key, int len)  
     {  
         const unsigned int m = 0x5bd1e995;  
         const int r = 24;  
@@ -37,4 +37,4 @@ MurmurHash2的实现
         h *= m;  
         h ^= h >> 15;  
         return h;  
-    }  ·
+    }  `

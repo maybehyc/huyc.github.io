@@ -1,9 +1,5 @@
 # Activity 深入研究
 
-## Activity生命周期
-## Activity启动模式
-## Activity源码分析
-
 ### Activity生命周期
 在正常情况下，一个Activity从启动到结束会以如下顺序经历整个生命周期：
 onCreate()->onStart()->onResume()->onPause()->onStop()->onDestory()。包含了六个部分，还有一个onRestart()没有调用，下面我们一一介绍这七部分内容。

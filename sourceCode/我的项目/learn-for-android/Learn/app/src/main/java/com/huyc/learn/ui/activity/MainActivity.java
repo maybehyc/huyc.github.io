@@ -1,5 +1,6 @@
 package com.huyc.learn.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -12,7 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.apple.learn.R;
+import com.huyc.learn.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -77,7 +78,8 @@ public class MainActivity extends AppCompatActivity {
                 String str = tv1.getText().toString();//得到数据
                 Toast.makeText(MainActivity.this, "" + str, Toast.LENGTH_SHORT).show();//显示数据
 
-
+                Intent intent = new Intent(MainActivity.this, WebActivity.class);
+                startActivity(intent);
 //                Intent it = new Intent(MainActivity.this, list0.class); //
 //                Bundle b = new Bundle();
 //                b.putString("we",str);  //string

@@ -27,7 +27,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.apple.learn.R;
+import com.huyc.learn.R;
 
 import java.util.ArrayList;
 import java.util.List;

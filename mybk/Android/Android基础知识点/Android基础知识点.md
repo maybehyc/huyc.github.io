@@ -1,108 +1,133 @@
 # Android 目录
 
-四大组件是什么
+## 四大组件是什么
+Activity、Service、Broadcast Receiver、Content Provider
 
-四大组件的生命周期和简单用法
+## 四大组件的生命周期和简单用法
+onCreate()->onStart()->onResume()->onPause()->onStop()->onDestory()
 
-Activity之间的通信方式
+## Activity之间的通信方式
+Intent、借助类的静态变量、借助全局变量/Application、借助SharedPreference 、使用Android数据库SQLite 、赤裸裸的使用File 、Android剪切板
 
-Activity各种情况下的生命周期
+## Activity各种情况下的生命周期
 
-横竖屏切换的时候，Activity 各种情况下的生命周期
+## 横竖屏切换的时候，Activity 各种情况下的生命周期
+onSaveInstanceState - onPause - onStop - onDestroy - onCreate - onStart - onRestoreInstanceState - onResume
 
-Activity与Fragment之间生命周期比较
+## Activity与Fragment之间生命周期比较
 
-Activity上有Dialog的时候按Home键时的生命周期
+## Activity上有Dialog的时候按Home键时的生命周期
 
-两个Activity 之间跳转时必然会执行的是哪几个方法？
+## 两个Activity 之间跳转时必然会执行的是哪几个方法？
 
-前台切换到后台，然后再回到前台，Activity生命周期回调方法。弹出Dialog，生命值周期回调方法。
+## 前台切换到后台，然后再回到前台，Activity生命周期回调方法。弹出Dialog，生命值周期回调方法。
 
-Activity的四种启动模式对比
+## Activity的四种启动模式对比
+standard
+singleTop
+singleTask
+singleInstance
 
-Activity状态保存于恢复
+## Activity状态保存于恢复
 
-fragment各种情况下的生命周期
+## fragment各种情况下的生命周期
 
-Fragment状态保存startActivityForResult是哪个类的方法，在什么情况下使用？
+## Fragment状态保存startActivityForResult是哪个类的方法，在什么情况下使用？
 
-如何实现Fragment的滑动？
+## 如何实现Fragment的滑动？
 
-fragment之间传递数据的方式？
+## Fragment之间传递数据的方式？
 
-Activity 怎么和Service 绑定？
+## Activity 怎么和Service 绑定？
+https://www.cnblogs.com/suliang-com/p/5873049.html
 
-怎么在Activity 中启动自己对应的Service？
+## 怎么在Activity 中启动自己对应的Service？
+同上
 
-service和activity怎么进行数据交互？
+## service和activity怎么进行数据交互？
+同上
 
-Service的开启方式
+## Service的开启方式
+同上
 
-请描述一下Service 的生命周期
+## 请描述一下Service 的生命周期
+见图
 
-谈谈你对ContentProvider的理解
+## 谈谈你对ContentProvider的理解
+ContentProvider可以实现在应用程序之间共享数据
 
-说说ContentProvider、ContentResolver、ContentObserver 之间的关系
+## 说说ContentProvider、ContentResolver、ContentObserver 之间的关系
 
-请描述一下广播BroadcastReceiver的理解
+## 请描述一下广播BroadcastReceiver的理解
+广播接收器
 
-广播的分类
+## 广播的分类
+有序广播
+无序广播
 
-广播使用的方式和场景
+## 广播使用的方式和场景
+App全局监听，这种主要用于在AndroidManifest中静态注册的广播接收器，一般我们在收到该消息后，需要做一些相应的动作，而这些动作与当前App的组件，比如Activity或者Service的是否运行无关，比如我们在集成第三方Push SDK时，一般都会添加一个静态注册的BroadcastReceiver来监听Push消息，当有Push消息过来时，会在后台做一些网络请求或者发送通知等等。
 
-在manifest 和代码中如何注册和使用BroadcastReceiver?
+组件局部监听，这种主要是在Activity或者Service中使用registerReceiver()动态注册的广播接收器，因为当我们收到一些特定的消息，比如网络连接发生变化时，我们可能需要在当前Activity页面给用户一些UI上的提示，或者将Service中的网络请求任务暂停。所以这种动态注册的广播接收器适合特定组件的特定消息处理。
 
-本地广播和全局广播有什么差别？
+## 在manifest 和代码中如何注册和使用BroadcastReceiver?
 
-BroadcastReceiver，LocalBroadcastReceiver 区别
+## 本地广播和全局广播有什么差别？
+BroadcastReceiver是针对应用间、应用与系统间、应用内部进行通信的一种方式
 
-AlertDialog,popupWindow,Activity区别
+LocalBroadcastReceiver仅在自己的应用内发送接收广播，也就是只有自己的应用能收到，数据更加安全广播只在这个程序里，而且效率更高。
 
-Application 和 Activity 的 Context 对象的区别
+## BroadcastReceiver，LocalBroadcastReceiver 区别
+同上
 
-Android属性动画特性
+## AlertDialog,popupWindow,Activity区别
 
-如何导入外部数据库?
+## Application 和 Activity 的 Context 对象的区别
 
-LinearLayout、RelativeLayout、FrameLayout的特性及对比，并介绍使用场景。
+## Android属性动画特性
 
-谈谈对接口与回调的理解
+## 如何导入外部数据库?
 
-回调的原理
+## LinearLayout、RelativeLayout、FrameLayout的特性及对比，并介绍使用场景。
 
-写一个回调demo
+## 谈谈对接口与回调的理解
 
-介绍下SurfView
+## 回调的原理
 
-RecycleView的使用
+## 写一个回调demo
 
-序列化的作用，以及Android两种序列化的区别
+## 介绍下SurfView
 
-差值器
+## RecycleView的使用
 
-估值器
+## 序列化的作用，以及Android两种序列化的区别
 
-Android中数据存储方式
+## 差值器
 
-Android源码相关分析
+## 估值器
 
-Android动画框架实现原理
+## Android中数据存储方式
 
-Android各个版本API的区别
+## Android源码相关分析
 
-Requestlayout，onlayout，onDraw，DrawChild区别与联系
+## Android动画框架实现原理
 
-invalidate和postInvalidate的区别及使用
+## Android各个版本API的区别
 
-Activity-Window-View三者的差别
+## Requestlayout，onlayout，onDraw，DrawChild区别与联系
 
-谈谈对Volley的理解
+## invalidate和postInvalidate的区别及使用
 
-如何优化自定义View
+## Activity-Window-View三者的差别
 
-低版本SDK如何实现高版本api？
+## 谈谈对Volley的理解
+android网络框架volley
 
-描述一次网络请求的流程
+## 如何优化自定义View
+
+## 低版本SDK如何实现高版本api？
+
+## 描述一次网络请求的流程
 
 HttpUrlConnection 和 okhttp关系
 

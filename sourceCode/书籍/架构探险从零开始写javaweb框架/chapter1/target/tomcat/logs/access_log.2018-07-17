@@ -1,0 +1,3 @@
+0:0:0:0:0:0:0:1 - - [17/Jul/2018:20:06:43 +0800] "GET /chapter1/hello HTTP/1.1" 404 1011 http-bio-8080-exec-1 108
+0:0:0:0:0:0:0:1 - - [17/Jul/2018:20:06:43 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-3 0
+0:0:0:0:0:0:0:1 - - [17/Jul/2018:20:09:35 +0800] "GET /chapter1/hello HTTP/1.1" 200 136 http-bio-8080-exec-1 1180

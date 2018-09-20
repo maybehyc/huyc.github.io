@@ -60,7 +60,6 @@ http://topmanopensource.iteye.com/blog/1738178
 
 
 12.线程中通过什么方式传输数据？使用过队列，为什么要使用队列，何种情况下使用队列？
-消息、回调、构造函数、方法        消息队列
 
 13.spring AOP IOC实现原理？
 
